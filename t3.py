@@ -1,0 +1,12 @@
+from turtle import *
+outside = 6
+inside = 6
+
+for i in range(outside):
+    fd(100)
+    for j in range(inside):
+        fd(100)
+        lt(360/inside)
+    lt(360/outside)
+
+mainloop()
