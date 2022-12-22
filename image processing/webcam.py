@@ -1,0 +1,15 @@
+import cv2
+
+camera = cv2.VideoCapture(0)  #0 means the first webcamera
+
+while camera.isOpened():
+    status, image = camera.read()
+    if not status:
+        print("Could not read image")
+        break
+    #do something with the image
+    cv2.imshow("Webcam window", image)
+    if cv2.waitKey(1) == 27:  #27 means the ESC key
+        break
+camera.release()
+cv2.destroyAllWindows()
